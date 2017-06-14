@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css"/>
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-
+    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
   <body>
@@ -37,7 +39,26 @@
           <span class="counter">140</span>
         </form>
       </section>
+      <section class="tweet-container">
+        <article class="tweet">
+          <header class="tweet-header">
+            <img class="avatar" src="http://images.clipartpanda.com/square-clip-art-ted_Eyes_Crossed.png">
+            <span class="name">Caitlin Quon</span>
+            <span class="handle">@caitlinquon</span>
+            <div class="clearfix"/>
+          </header>
+          
+          <p class="text-tweet">Little tweet here</p>
+          <footer class="time-stamp">
+            <span>10 days ago</span>
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </footer>
+        </article>  
+      </section>
     </main>
+
 
   </body>
 </html>
