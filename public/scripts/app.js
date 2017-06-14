@@ -46,13 +46,13 @@ var data = [
 ];
 
 $(document).ready(function(){
-
+//preventing xss with escaping 
   function escape(str) {
     var div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
-
+//creates each tweet
   function createTweetElement(newTweetData){
     
     var tweetContent = escape(newTweetData.content.text);
@@ -78,7 +78,7 @@ $(document).ready(function(){
             </footer>
           </article>`;
   }
-
+//renders tweets
   function renderTweets(tweets){
     for (var i = 0; i < tweets.length; i++){
       var $tweet = createTweetElement(tweets[i]);
