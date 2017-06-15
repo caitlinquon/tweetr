@@ -99,6 +99,7 @@ $(document).ready(function(){
 
   $('#submit-tweet').on('submit', function(event) {
     event.preventDefault();
+    var textarea = $(this).find('textarea');
     var text= $(this).find('[name=text]').val();
     $('.error-message').addClass('hidden')
     if(text.length === 0){
@@ -115,6 +116,7 @@ $(document).ready(function(){
       data: $(this).serialize()
     }).done(function(data){
       loadTweets();
+      textarea.val('');
     });
   });
 
