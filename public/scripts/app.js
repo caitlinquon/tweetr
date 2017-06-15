@@ -71,7 +71,7 @@ $(document).ready(function(){
             
             <p class="text-tweet">${tweetContent}</p>
             <footer class="time-stamp">
-              <span>${tweetCreatedAt}</span>
+              <span>${moment(tweetCreatedAt).fromNow()}</span>
               <i class="fa fa-flag" aria-hidden="true"></i>
               <i class="fa fa-retweet" aria-hidden="true"></i>
               <i class="fa fa-heart" aria-hidden="true"></i>
@@ -82,12 +82,47 @@ $(document).ready(function(){
   function renderTweets(tweets){
     for (var i = 0; i < tweets.length; i++){
       var $tweet = createTweetElement(tweets[i]);
-      $('.tweet-container').append($tweet);
+      $('.tweet-container').prepend($tweet);
     }
   }
 
-  renderTweets(data);
+  function loadTweets(){
+    $.ajax({
+      method: 'GET',
+      url: '/tweets/',
+    }).success(function(data){
+      renderTweets(data);
+    }).error(function(error){
+      console.log(error);
+    })
+  }
 
+  $('#submit-tweet').on('submit', function(event) {
+    event.preventDefault();
+    var text= $(this).find('[name=text]').val();
+    $('.error-message').addClass('hidden')
+    if(text.length === 0){
+      $('#empty-tweet').removeClass('hidden')
+      return;
+    } 
+     if(text.length > 140){
+      $('#too-many').removeClass('hidden')
+      return;
+    } 
+    $.ajax({
+      method: 'POST',
+      url: '/tweets/',
+      data: $(this).serialize()
+    }).done(function(data){
+      loadTweets();
+    });
+  });
+
+  $('.compose-button').on('click', function() {
+    $('.new-tweet').slideToggle().find('textarea').focus();
+  });
+
+  renderTweets(data);
 });
 
 
