@@ -36,8 +36,8 @@ hr {
   border-radius: 5px;
   margin-right: 50px;
   opacity: 0.6;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .name {
@@ -55,6 +55,7 @@ hr {
 
 .text-tweet {
   padding: 1em;
+  overflow: hidden;
 }
 
 .handle {
@@ -98,4 +99,22 @@ hr {
   visibility: visible;
 }
 
+.hidden {
+  display: none;
+}
 
+.compose-button {
+  float: right;
+  margin: 13px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: white;
+  border-color: darkgray;
+  opacity: 0.8;
+  color: lightseagreen;
+}
+
+.compose-button:hover {
+  opacity: 1;
+  color: black;
+}
