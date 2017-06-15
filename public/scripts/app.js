@@ -96,7 +96,7 @@ $(document).ready(function(){
       console.log(error);
     });
   }
-
+//error messages
   $('#submit-tweet').on('submit', function(event) {
     event.preventDefault();
     var textarea = $(this).find('textarea');

@@ -1,9 +1,13 @@
-.new-tweet {
-  margin-right: 50px;
-  padding: 0.5em 0.5em 1em 0.5em;
-  background-color: #EEEEEE;
-  border: 1px solid lightgrey;
+.avatar {
+  height: 60px;
+  width: 60px;
+  float: left;
   border-radius: 5px;
+  margin: 8px;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .compose {
@@ -13,94 +17,9 @@
   margin-top: 0;
 }
 
-hr {
-  border-width: 1px;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
 .compose-box {
   width: 100%;
   padding: 0.4em;
-}
-
-.counter {
-  float: right;
-  font-style: italic;
-  font-size: 90%;
-  margin: 5px;
-}
-
-.tweet {
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  margin-right: 50px;
-  opacity: 0.6;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.name {
-  float: left;
-  margin-top:10px;
-}
-
-.tweet-header {
-  font-size: 25px;
-  font-style: bold;
-  background-color: #EEEEEE;
-  border: 1px solid #eeeeee;
-  height: 80px;
-}
-
-.text-tweet {
-  padding: 1em;
-  overflow: hidden;
-}
-
-.handle {
-  float: right;
-  font-size: 15px;
-  color: darkgrey;
-  margin: 5px;
-  padding-top: 8px;
-}
-
-.avatar {
-  height: 60px;
-  width: 60px;
-  float: left;
-  border-radius: 5px;
-  margin: 8px;
-}
-
-.time-stamp {
-  font-size: 12px;
-  border-top: 1px solid lightgray;
-  padding: 1em;
-}
-
-.clearfix {
-  clear: both;
-}
-
-.tweet:hover {
-  opacity: 1;
-}
-
-.fa {
-  float: right;
-  padding: 3px;
-  visibility: hidden;
-  color:lightseagreen;
-}
-
-.tweet:hover .fa {
-  visibility: visible;
-}
-
-.hidden {
-  display: none;
 }
 
 .compose-button {
@@ -118,3 +37,88 @@ hr {
   opacity: 1;
   color: black;
 }
+
+.counter {
+  float: right;
+  font-style: italic;
+  font-size: 90%;
+  margin: 5px;
+}
+
+.fa {
+  float: right;
+  padding: 3px;
+  visibility: hidden;
+  color:lightseagreen;
+}
+
+.handle {
+  float: right;
+  font-size: 15px;
+  color: darkgrey;
+  margin: 5px;
+  padding-top: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+hr {
+  border-width: 1px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.name {
+  float: left;
+  margin-top:10px;
+}
+
+.new-tweet {
+  margin-right: 50px;
+  padding: 0.5em 0.5em 1em 0.5em;
+  background-color: #EEEEEE;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.text-tweet {
+  padding: 1em;
+  overflow: hidden;
+}
+
+.time-stamp {
+  font-size: 12px;
+  border-top: 1px solid lightgray;
+  padding: 1em;
+}
+
+.tweet {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-right: 50px;
+  opacity: 0.6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tweet-header {
+  font-size: 25px;
+  font-style: bold;
+  background-color: #EEEEEE;
+  border: 1px solid #eeeeee;
+  height: 80px;
+}
+
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet:hover .fa {
+  visibility: visible;
+}
+
+
+
+

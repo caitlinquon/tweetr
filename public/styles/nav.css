@@ -10,10 +10,9 @@
   z-index: 2;
 }
 
-#nav-bar .logo {
-  height: 80px;
-  width: 80px;
-  float: left;
+#nav-bar button img {
+  width: 15px;
+  height: 15px;
 }
 
 #nav-bar .header {
@@ -22,7 +21,10 @@
   font-size: 2em;
 }
 
-#nav-bar button img {
-  width: 15px;
-  height: 15px;
+#nav-bar .logo {
+  height: 80px;
+  width: 80px;
+  float: left;
 }
+
+
