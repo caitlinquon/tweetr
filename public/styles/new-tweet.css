@@ -92,7 +92,7 @@ hr {
   float: right;
   padding: 3px;
   visibility: hidden;
-  color: lightseagreen;
+  color:lightseagreen;
 }
 
 .tweet:hover .fa {

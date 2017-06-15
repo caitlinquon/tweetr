@@ -4,7 +4,7 @@ $(document).ready(function() {
     var remainder = (140 - $(this).val().length);
     $(counter).text(remainder);
     $(counter).css('color', remainder < 0 ? 'red' : 'black');
-  })
+  });
 });
 
 

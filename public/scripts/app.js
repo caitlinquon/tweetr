@@ -3,9 +3,9 @@ var data = [
     "user": {
       "name": "Newton",
       "avatars": {
-        "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
+        "small": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
         "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-        "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
+        "large": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
       },
       "handle": "@SirIsaac"
     },
@@ -18,9 +18,9 @@ var data = [
     "user": {
       "name": "Descartes",
       "avatars": {
-        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
+        "small": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
         "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
+        "large": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
       },
       "handle": "@rd" },
     "content": {
@@ -32,9 +32,9 @@ var data = [
     "user": {
       "name": "Johann von Goethe",
       "avatars": {
-        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+        "small": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
         "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+        "large": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
       },
       "handle": "@johann49"
     },
@@ -46,7 +46,7 @@ var data = [
 ];
 
 $(document).ready(function(){
-//preventing xss with escaping 
+//preventing xss with escaping
   function escape(str) {
     var div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -89,27 +89,27 @@ $(document).ready(function(){
   function loadTweets(){
     $.ajax({
       method: 'GET',
-      url: '/tweets/',
+      url: '/tweets/'
     }).success(function(data){
       renderTweets(data);
     }).error(function(error){
       console.log(error);
-    })
+    });
   }
 
   $('#submit-tweet').on('submit', function(event) {
     event.preventDefault();
     var textarea = $(this).find('textarea');
-    var text= $(this).find('[name=text]').val();
-    $('.error-message').addClass('hidden')
+    var text = $(this).find('[name=text]').val();
+    $('.error-message').addClass('hidden');
     if(text.length === 0){
-      $('#empty-tweet').removeClass('hidden')
+      $('#empty-tweet').removeClass('hidden');
       return;
-    } 
-     if(text.length > 140){
-      $('#too-many').removeClass('hidden')
+    }
+    if(text.length > 140){
+      $('#too-many').removeClass('hidden');
       return;
-    } 
+    }
     $.ajax({
       method: 'POST',
       url: '/tweets/',
