@@ -126,7 +126,7 @@ $(document).ready(function(){
     $('.new-tweet').slideToggle().find('textarea').focus();
   });
 
-  renderTweets(data);
+  loadTweets();
 });
 
 
