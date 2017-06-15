@@ -80,6 +80,7 @@ $(document).ready(function(){
   }
 //renders tweets
   function renderTweets(tweets){
+   $('.tweet-container').empty();
     for (var i = 0; i < tweets.length; i++){
       var $tweet = createTweetElement(tweets[i]);
       $('.tweet-container').prepend($tweet);
@@ -120,6 +121,7 @@ $(document).ready(function(){
     });
   });
 
+  $('.new-tweet').hide();
   $('.compose-button').on('click', function() {
     $('.new-tweet').slideToggle().find('textarea').focus();
   });
