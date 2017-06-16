@@ -30,7 +30,7 @@
   background-color: white;
   border-color: darkgray;
   opacity: 0.8;
-  color: lightseagreen;
+  color: palevioletred;
 }
 
 .compose-button:hover {
@@ -49,7 +49,7 @@
   float: right;
   padding: 3px;
   visibility: hidden;
-  color:lightseagreen;
+  color: lightpink;
 }
 
 .handle {
@@ -90,7 +90,7 @@ hr {
 
 .time-stamp {
   font-size: 12px;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid lightpink;
   padding: 1em;
 }
 
@@ -101,13 +101,14 @@ hr {
   opacity: 0.6;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-color: lightpink;
 }
 
 .tweet-header {
-  font-size: 25px;
+  font-size: 25px; 
   font-style: bold;
-  background-color: #EEEEEE;
-  border: 1px solid #eeeeee;
+  background-color: #FFE4E1;
+  border: 1px solid pink;
   height: 80px;
 }
 
